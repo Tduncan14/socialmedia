@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const User = require('../models/user.models');
 const fs = require('fs');
-import extend from 'lodash/extend'
+const  extend = require('lodash/extend')
 const formidable = require('formidable');
 
 
@@ -53,6 +53,7 @@ const userByID= async(req,res,next,id) =>{
         error:"Could not retrieve user"
     })
    }
+}
 
  const read = (req,res) =>{
 
@@ -80,7 +81,7 @@ const userByID= async(req,res,next,id) =>{
       })
     }
   }
- }
+ 
 
 
 const remove = async (req,res) => {
@@ -129,7 +130,7 @@ const list = async (req,res) => {
 
 
 
-export default {
+module.exports =  {
     create,
     userByID,
     read,
